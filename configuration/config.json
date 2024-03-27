@@ -1,0 +1,12 @@
+{
+    "sensitivity": 40,
+    "headshot": 20,
+    "confidence": 40,
+    "height": 320,
+    "width": 320,
+    "yolo_version": "v5",
+    "yolo_model": "Default",
+    "yolo_device": "cpu",
+    "activation_key": 20,
+    "quit_key": 165
+}
