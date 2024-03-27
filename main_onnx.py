@@ -101,13 +101,13 @@ def main(**argv):
         with torch.no_grad():
             if settings['yolo_device'] == "nvidia":
                 frame = torch.from_numpy(frame).to('cuda')
-
                 frame = torch.movedim(frame, 2, 0)
                 frame = frame.half()
                 frame /= 255
                 if len(frame.shape) == 3:
                     frame = frame[None]
             else:
+                frame = np.array([frame])
                 frame = frame / 255
                 frame = frame.astype(np.half)
                 frame = np.moveaxis(frame, 3, 1)
